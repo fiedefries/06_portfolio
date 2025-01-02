@@ -4,11 +4,24 @@
   box-sizing: border-box;
 }
 body {
+  background-color: #f2ede4;
 }
 header {
 }
 
 h1 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  color: #0b438c;
+}
+p {
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 nav ul {
