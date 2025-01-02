@@ -16,12 +16,56 @@ h1 {
   font-style: normal;
   color: #0b438c;
 }
-p {
-  font-family: "Noto Serif Display", serif;
+#forside {
+  position: relative;
+  height: 100vh;
+}
+#ommig {
+  position: relative;
+  height: 100vh; /*dette får skærmen til at være den rigtige størrelse*/
+}
+
+h3 {
+  position: relative;
+  z-index: 0;
+  font-size: 50px;
+  font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
+  color: #252f9c;
+  text-align: center;
+}
+h2 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  text-align: center;
+}
+p {
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 20px;
+  font-style: normal;
   font-variation-settings: "wdth" 100;
+  text-align: center;
+}
+.cv {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.lagbillede {
+  position: relative; /* Eller fixed, hvis det skal forblive midt på skærmen ved scroll */
+  top: 13.5%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Flytter billedet præcist til midten */
+  z-index: 1; /* Sørger for, at billedet vises foran H1 */
+  width: 300px; /* Juster størrelsen efter behov */
+  height: auto; /* Bevarer billedets proportioner */
+}
+img {
 }
 
 nav ul {
