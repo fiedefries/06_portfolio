@@ -11,33 +11,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet" />
   </head>
   <body>
     <header>
+      <div class="logo">
+        <a href="/">
+          <img src="" alt="Logo" />
+        </a>
+      </div>
+      <div class="navn"><h2>FIE DE FRIES</h2></div>
       <nav>
-        <ul>
+        <ul class="menu">
           <li><a href="#forside">Forside</a></li>
           <li><a href="#ommig">Om mig</a></li>
-          <li><a href="projekt">Projekter</a></li>
+          <li><a href="projekt.html">Projekter</a></li>
           <!--forside og om mig er på samme side og skal stå i section, og projekter har sin egen side-->
         </ul>
+
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </nav>
     </header>
     <main>
       <section id="forside">
-        <h1>FIE DE FRIES PORTFOLIO</h1>
+        <h1 class="h1-forside">
+          FIE DE FRIES<br />
+          <span><span class="p">P</span>ORTFOLIO</span>
+        </h1>
+        <div class="img-forside">
+          <img src="img/placeholder.png" alt="placeholder" />
+        </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eaque ipsum culpa ea distinctio obcaecati laborum vel reprehenderit, blanditiis ipsa voluptate consequuntur earum, accusamus inventore ipsam temporibus omnis tempore. Consequatur?</p>
       </section>
       <section id="ommig">
-        <h3 class="tekstbagbillede">FIE DE FRIES</h3>
+        <h1 class="tekstbagbillede">FIE DE FRIES</h1>
         <img src="img/placeholder.png" alt="placeholder" class="lagbillede" />
         <div class="cv">
-          <h2>cv</h2>
+          <h2>om mig</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi error dolor dolorum ipsum explicabo. Placeat quidem minima doloremque magni alias maxime exercitationem fugiat debitis nostrum obcaecati, perspiciatis reiciendis et. Illo?</p>
         </div>
       </section>
     </main>
     <footer>kontakt</footer>
+    <script src="menu.js"></script>
   </body>
 </html>

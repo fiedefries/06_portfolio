@@ -5,27 +5,167 @@
 }
 body {
   background-color: #f2ede4;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%; /* Sørger for, at billedet ikke overstiger containeren */
+  height: auto; /* Bevarer billedets proportioner */
 }
 header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f2ede4;
+}
+/*MENU*/
+h2 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 20px;
+}
+h2 .navn {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
-h1 {
+nav {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li:last-child {
+  margin-right: 0;
+}
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  font-family: "Almarai", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.menu a:hover {
+  text-decoration: underline;
+}
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 910px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #f2ede4;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+@media (min-width: 910px) {
+  .navn {
+    position: absolute;
+    left: 45%;
+  }
+}
+/*FORSIDE*/
+
+#forside {
+  position: relative;
+  height: 100vh;
+}
+.h1-forside {
+  text-align: center;
+  font-size: 40px;
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
   color: #0b438c;
+  margin-top: 20px;
 }
-#forside {
-  position: relative;
-  height: 100vh;
+
+.p {
+  font-family: "Imperial Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-right: 5px;
 }
+.img-forside {
+  display: flex; /* Aktiverer flexbox */
+  justify-content: center; /* Centrerer horisontalt */
+  align-items: center; /* Centrerer vertikalt */
+  height: auto; /* Gør containeren lige så høj som hele viewporten */
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/*OM MIG*/
 #ommig {
   position: relative;
   height: 100vh; /*dette får skærmen til at være den rigtige størrelse*/
 }
 
-h3 {
+.tekstbagbillede {
   position: relative;
   z-index: 0;
   font-size: 50px;
@@ -33,43 +173,21 @@ h3 {
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-  color: #252f9c;
+  color: black;
   text-align: center;
 }
-h2 {
-  font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  text-align: center;
-}
-p {
-  font-family: "Noto Serif Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 20px;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  text-align: center;
-}
+
 .cv {
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .lagbillede {
   position: relative; /* Eller fixed, hvis det skal forblive midt på skærmen ved scroll */
-  top: 13.5%;
+  top: 15.8%;
   left: 50%;
   transform: translate(-50%, -50%); /* Flytter billedet præcist til midten */
   z-index: 1; /* Sørger for, at billedet vises foran H1 */
   width: 300px; /* Juster størrelsen efter behov */
   height: auto; /* Bevarer billedets proportioner */
-}
-img {
-}
-
-nav ul {
-}
-
-nav a {
 }
