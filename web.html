@@ -4,18 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grundlæggende web</title>
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
+      <div class="logo">
+        <a href="/">
+          <img src="" alt="Logo" />
+        </a>
+      </div>
+      <div class="navn"><h2>FIE DE FRIES</h2></div>
       <nav>
-        <li><a href="forside">Forside</a></li>
-        <li><a href="projekt">Projekter</a></li>
-        <li><a href="ommig">Om mig</a></li>
+        <ul class="menu">
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="#ommig">Om mig</a></li>
+          <li><a href="projekt.html">Projekter</a></li>
+          <!--forside og om mig er på samme side og skal stå i section, og projekter har sin egen side-->
+        </ul>
+
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </nav>
     </header>
+
     <main>
-      <h1>Grundlæggende web</h1>
+      <section class="content">
+        <div class="ventre">
+          <h1>02 WEB</h1>
+
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, nobis impedit libero facilis placeat esse maxime quisquam eaque deleniti, voluptatum aliquid voluptas illum nesciunt consequatur harum perferendis doloremque assumenda error!</p>
+          <nav class="navbar">
+            <a href="#section1">Sektion 1</a>
+            <a href="#section2">Sektion 2</a>
+            <a href="#section3">Sektion 3</a>
+          </nav>
+        </div>
+        <div class="højre">
+          <img src="img/placeholder.png" alt="Billede" />
+        </div>
+      </section>
     </main>
     <footer>kontakt</footer>
+    <script src="menu.js"></script>
   </body>
 </html>
