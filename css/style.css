@@ -129,20 +129,36 @@ nav {
   }
 }
 /*FORSIDE*/
-
-#forside {
-  position: relative;
+.forside_alt {
+  display: flex;
+  flex-direction: column; /* Layout til mobil: Alt er i en kolonne */
+  align-items: center; /* Centrer indhold horisontalt */
+  text-align: center; /* Centrer tekst */
+  padding: 20px;
+  gap: 20px; /* Giver afstand mellem elementerne */
   height: 100vh;
 }
-.h1-forside {
-  text-align: center;
-  font-size: 40px;
+
+.forside .h1-forside {
+  font-size: 50px;
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
   color: #0b438c;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.forside p {
+  line-height: 1.5;
+  font-size: 18px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.img-forside img {
+  justify-content: center; /* Centrerer horisontalt */
+  align-items: center; /* Centrerer vertikalt */
+  height: auto; /* Gør containeren lige så høj som hele viewporten */
 }
 
 .p {
@@ -151,13 +167,34 @@ nav {
   font-style: normal;
   margin-right: 5px;
 }
-.img-forside {
-  display: flex; /* Aktiverer flexbox */
-  justify-content: center; /* Centrerer horisontalt */
-  align-items: center; /* Centrerer vertikalt */
-  height: auto; /* Gør containeren lige så høj som hele viewporten */
-  margin-left: 20px;
-  margin-right: 20px;
+@media (min-width: 800px) {
+  .forside_alt {
+    flex-direction: row; /* Skift layout til række */
+    align-items: flex-start; /* Juster indholdet til toppen */
+    text-align: center; /* Teksten venstrestilles */
+    padding: 40px;
+    gap: 1px; /* Mere afstand mellem elementerne */
+  }
+  .forside {
+    flex: 1;
+    margin-top: 80px;
+  }
+  .forside .h1-forside {
+    font-size: 80px;
+  }
+  .forside p {
+    font-size: 20px;
+    line-height: 1.5rem;
+  }
+  .img-forside {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .img-forside img {
+    width: 90%;
+    max-width: 500px;
+  }
 }
 /*OM MIG*/
 #ommig {
@@ -190,4 +227,59 @@ nav {
   z-index: 1; /* Sørger for, at billedet vises foran H1 */
   width: 300px; /* Juster størrelsen efter behov */
   height: auto; /* Bevarer billedets proportioner */
+}
+/*PROJEKTSIDE*/
+.scroll {
+  position: relative;
+  height: 90vh; /* Fylder næsten hele skærmen */
+  display: flex;
+  align-items: flex-end; /* Justerer scrollbar til bunden */
+  overflow: hidden; /* Skjuler overskydende indhold */
+  gap: 8px;
+  padding: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.tema {
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+  scroll-snap-align: center; /* Snap hvert element */
+  text-align: left;
+}
+.tema img {
+  width: 300px;
+  height: auto;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.tema img:hover {
+  transform: scale(1.1); /* Zoom-effekt */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Skygge ved hover */
+}
+.tema h2 {
+  margin-top: 10px;
+  font-size: 30px;
+  color: #333;
+}
+.h1-projekt {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+}
+/*Desktop*/
+@media (min-width: 910px) {
+  .tema img {
+    width: 400px;
+    height: auto;
+  }
+  .tema h2 {
+    font-size: 50px;
+  }
+  .h1-projekt {
+    font-size: 40px;
+  }
 }
